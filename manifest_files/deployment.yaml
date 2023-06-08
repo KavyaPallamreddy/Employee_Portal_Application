@@ -1,0 +1,40 @@
+#Deployment
+###controllers/pb-deploy.tml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Employee-Portal-Application-deployment
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+  minReadySeconds: 5
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: Employee-Portal-Application
+  template:
+    metadata:
+      labels:
+        app: 
+    spec:
+      containers:
+      - name: Employee-Portal-Application-container
+        # image: 268360024445.dkr.ecr.us-west-2.amazonaws.com/petclinic-application:latest-11
+        image: kavyapallamreddy/Employee-Portal-Application:3
+        imagePullPolicy: Always
+        resources:
+          limits:
+            cpu: '1'
+            memory: '500Mi'
+          requests:
+            cpu: '1'
+            memory: '500Mi'
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: regcred
+
+
+
