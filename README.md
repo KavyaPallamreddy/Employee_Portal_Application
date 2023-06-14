@@ -1,12 +1,9 @@
 
+# Employee_Portal_Application
 
-## Understanding the Spring Petclinic application with a few diagrams
-
-
-<a href="https://speakerdeck.com/michaelisvy/spring-petclinic-sample-application">See the presentation here</a>
-
-I created a pet-clinic project to automate the end to end process of creating the AWS infrastructure, continuously integrate and deploy the application to AWS EKS Kubernetes Cluster
+I created a Employee_Portal_Application to automate the end to end process of creating the AWS infrastructure, continuously integrate and deploy the application to AWS EKS Kubernetes Cluster
 ## DEVOPS Continuous integration and Continuous deployment
+![image](https://github.com/KavyaPallamreddy/Employee_Portal_Application/assets/116321339/c922ea07-a051-4d22-a650-f7ab7068d74e)
 
 
 ## Prerequisites
@@ -84,7 +81,21 @@ Here are the step-by-step details to set up an end-to-end Jenkins pipeline for a
            7.1 Trigger the Jenkins pipeline to start the CI/CD process for the Python application.
            7.2 Monitor the pipeline stages and fix any issues that arise.
 
+
+ ## OUTPUT
+ ### Employee_Portal_Application Website:
+ ![image](https://github.com/KavyaPallamreddy/Employee_Portal_Application/assets/116321339/cc803842-45f3-49b1-aa46-61089d5cdbdf)
+ ### Adding Employee information:
+ ![image](https://github.com/KavyaPallamreddy/Employee_Portal_Application/assets/116321339/4cd338ba-6f24-46a0-9d86-e8a54afc171d)
+ ![image](https://github.com/KavyaPallamreddy/Employee_Portal_Application/assets/116321339/8fe6d176-d6e2-4e4e-9226-b886cc48beaf)
+ ### Edit Employee information:
+ ![image](https://github.com/KavyaPallamreddy/Employee_Portal_Application/assets/116321339/de7cebee-c946-4ae2-89c3-424e88572a69)
+ ![image](https://github.com/KavyaPallamreddy/Employee_Portal_Application/assets/116321339/eb1c8258-8d6b-491d-a8d5-d476ca4bfa48)
+ ### Delete Employee:
+ ![image](https://github.com/KavyaPallamreddy/Employee_Portal_Application/assets/116321339/0e671284-9028-4354-8091-84ac1bfe9474)
+ Delete the Sita information
+ ![image](https://github.com/KavyaPallamreddy/Employee_Portal_Application/assets/116321339/cb5bc12d-7496-4645-aa02-9dd4d6476428)
+
  
-This end-to-end Jenkins pipeline will automate the entire CI/CD process for a Python application, from code checkout to production deployment, using popular tools like Jenkins, Argo CD, Helm, and Kubernetes.
- 
+This end-to-end Jenkins pipeline will automate the entire CI/CD process for a Python application, from code checkout to production deployment, using popular tools like Docker,Argo CD, Helm, and Kubernetes.
  
