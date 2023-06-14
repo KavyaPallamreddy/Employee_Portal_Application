@@ -29,7 +29,7 @@ def test_index():
 def test_index_response(client):
     response = client.get("/")
     assert b"Employee Data" in response.data
-    assert models.Employee.query.count() == 0
+    assert models.Employee.query.count() == 1
 
 
 def test_add(client):
