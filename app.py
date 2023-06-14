@@ -1,6 +1,7 @@
 from models import models
 from flask import Flask, request, render_template, redirect
 
+
 DATABASE = "emp_db.db"
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -22,7 +23,7 @@ def index():
 # add page; to add a new employee
 @app.route("/add", methods=["POST", "GET"])
 def add():
-
+   
     if request.method == "POST":
         form_data = request.form
         obj = models.Employee(
