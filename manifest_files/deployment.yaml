@@ -22,7 +22,7 @@ spec:
       containers:
       - name: employeeportal-container
         # image: 268360024445.dkr.ecr.us-west-2.amazonaws.com/petclinic-application:latest-11
-        image: kavyapallamreddy/employee-portal-application:4
+        image: kavyapallamreddy/employee-portal-application:1
         imagePullPolicy: Always
         resources:
           limits:
