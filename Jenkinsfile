@@ -51,17 +51,17 @@ pipeline {
 				steps {
 						script {
 						withCredentials([string(credentialsId: 'github-cred', variable: 'GITHUB_TOKEN')])  {
-						sh """
+						sh '''
 						  git config user.email "kavyareddy41997@gmail.com"
 						  git config user.name "KavyaPallamreddy"
 						  sed -i "s+${DOCKER_USER_NAME}/${IMAGE_REPO_NAME}.*+${DOCKER_USER_NAME}/${IMAGE_REPO_NAME}:${BUILD_NUMBER}+g" manifest_files/deployment.yaml
 						  git add manifest_files/deployment.yaml 
 						  git commit -m "Update deployment image and test reports"
 						  git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
-				 """
+				                 '''
 						}
 						}
-				 }
-		 }
+				        }
+		            }
       }
     }
