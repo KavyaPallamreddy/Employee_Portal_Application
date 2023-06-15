@@ -3,13 +3,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: petclinic-service
+  name: employeeportal-service
   labels:
-    app: petclinic-app
+    app: employeeportal-app
 spec:
   selector:
-    app: petclinic-app
-  type: LoadBalancer
+    app: employeeportal-app
+  type: NodePort
   ports:
   - nodePort: 31280
     port: 5000
