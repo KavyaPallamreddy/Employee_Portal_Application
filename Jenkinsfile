@@ -57,7 +57,7 @@ pipeline {
 		                                          BUILD_NUMBER=${BUILD_NUMBER}
 							  sed -i "s+${DOCKER_USER_NAME}/${IMAGE_REPO_NAME}:*+${DOCKER_USER_NAME}/${IMAGE_REPO_NAME}:${BUILD_NUMBER}+g" manifest_files/deployment.yaml
 							  git add manifest_files/deployment.yaml 
-							  git commit -m"Update deployment image"
+							  git commit -m "Update deployment.yaml"
 							  git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
 				                 '''
 						}
