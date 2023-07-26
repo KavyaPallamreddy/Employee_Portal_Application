@@ -65,4 +65,27 @@ pipeline {
 				        }
 		            }
       }
+	post {
+        success {
+           
+                emailext body:  """<p>SUCCESSFUL JOB</p>
+                <p>____JOBDETAILS____</p>
+                <p> Job_Name: ${env.JOB_NAME} Build_Number: [${env.BUILD_NUMBER}]:</p>""",
+                mimeType: 'text/html',
+                attachLog: true ,
+                recipientProviders: [[$class: 'RequesterRecipientProvider']],
+                subject: 'Jenkins Build Succeeded'
+           }
+     
+    
+        failure {
+                emailext body: """<p>FAILED JOB </p>
+                <p>____JOBDETAILS____</p>
+                <p> Job_Name: ${env.JOB_NAME} Build_Number: [${env.BUILD_NUMBER}] Check the attached logs </p>""",
+                mimeType: 'text/html',
+                attachLog: true ,
+                recipientProviders: [[$class: 'RequesterRecipientProvider']],
+                subject: 'Jenkins Build Failure'
+                }
+    }
     }
